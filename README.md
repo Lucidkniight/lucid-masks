@@ -4,7 +4,7 @@ A simple script that adds masks as items. Remove your mask with /mask to get the
 ## Dependencies
  - [qb-core](https://github.com/qbcore-framework/qb-core)
 
-## Installation
+# Installation
 
 
 ## Step 1
