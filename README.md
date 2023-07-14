@@ -1,5 +1,6 @@
 # lucid-masks
-
+- [preview](https://streamable.com/gid7jj)
+- Item based mask script
 ## Dependencies
  - [qb-core](https://github.com/qbcore-framework/qb-core)
 
