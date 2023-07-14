@@ -13,7 +13,7 @@
 ## Step 2
 * Add the following line to your **qb-core/shared/items.lua**
 ```lua
-	['mask']  					= {['name'] = 'mask', 				    ['label'] = 'Mask',  	  		['weight'] = 1,  		['type'] = 'item',  	['image'] = 'mask.png',  			['unique'] = true,  	['useable'] = true,  	['shouldClose'] = true,  	['combinable'] = nil, 	['description'] = ''},
+	['mask']  = {['name'] = 'mask', ['label'] = 'Mask',  ['weight'] = 1,  ['type'] = 'item',  ['image'] = 'mask.png',  ['unique'] = true,  ['useable'] = true,  ['shouldClose'] = true,  ['combinable'] = nil, 	['description'] = ''},
 
 ```
 
