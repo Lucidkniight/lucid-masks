@@ -82,7 +82,7 @@ function FormatItemInfo(itemData, dom) {
 
 ## Installation Complete
 * restart your server
-* do not spawn in the mask item using a menu as it will have no store data, go to a clothing store or something
+* do not spawn in the mask item using a menu as it will have no stored data and wont work, go to a clothing store or something
 * enjoy!
 
 ## Credits
