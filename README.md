@@ -17,7 +17,7 @@ Item based mask script
 	['mask']  = {['name'] = 'mask', ['label'] = 'Mask',  ['weight'] = 1,  ['type'] = 'item',  ['image'] = 'mask.png',  ['unique'] = true,  ['useable'] = true,  ['shouldClose'] = true,  ['combinable'] = nil, 	['description'] = ''},
 
 ```
-
+* Drag the "mask.png" image into your **inventory/html/images**
 ## Step 3
 * Find the following line in your **qb-radialmenu/config.lua**
 ```lua
