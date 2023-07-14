@@ -1,6 +1,6 @@
 # lucid-masks
+Item based mask script
 - [preview](https://streamable.com/gid7jj)
-- Item based mask script
 ## Dependencies
  - [qb-core](https://github.com/qbcore-framework/qb-core)
 
@@ -83,3 +83,6 @@ function FormatItemInfo(itemData, dom) {
 * restart your server
 * do not spawn in the mask item using a menu as it will have no store data, go to a clothing store or something
 * enjoy!
+
+## Credits
+- [mckleansscripts](https://github.com/McKleans-Scripts/mk-items) for the mask image
