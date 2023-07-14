@@ -18,7 +18,7 @@
 ```
 
 ## Step 3
-* Find the following line to your **qb-radialmenu/config.lua**
+* Find the following line in your **qb-radialmenu/config.lua**
 ```lua
 id = 'Mask',
 title = 'Mask',
