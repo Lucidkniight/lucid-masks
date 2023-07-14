@@ -1,5 +1,5 @@
 # lucid-masks
-A simple script that adds masks as items. Remove your mask with /mask to get the item in your inventory. You can then either use the mask item to put it on, or do /mask again to put on the first mask in your inventory.
+A simple script that adds masks as items. Remove your mask with /mask to get the item in your inventory. You can then either use the mask item to put it on, or do /mask again to put on the first mask in your
 - [preview](https://streamable.com/gid7jj)
 ## Dependencies
  - [qb-core](https://github.com/qbcore-framework/qb-core)
@@ -55,12 +55,13 @@ shouldClose = true
 * and comment it out :
 
 ```lua
---id = 'Mask',
---title = 'Mask',
---icon = 'masks-theater',
---type = 'client',
---event = 'lucid-masks:client:MaskOff',
---shouldClose = true
+    --["mask"] = {
+    --    Func = function() ToggleClothing("Mask") end,
+    --    Sprite = "mask",
+    --    Desc = "Take your mask off/on",
+    --    Button = 6,
+    --    Name = "Mask"
+    --}
 ```
 
 ## Step 5 (optional) - ps-inventory / lj-inventory
