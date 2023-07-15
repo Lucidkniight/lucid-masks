@@ -15,6 +15,7 @@ end, false)
 
 RegisterNetEvent('lucid-masks:client:MaskOn', function(item)
     local ped = PlayerPedId()
+    if item.info.drawableId == nil then print("This mask has no data. Do not spawn it in. Instead go to a clothing store then remove the mask") end
     if GetPedDrawableVariation(ped, 1) ~= 0 then QBCore.Functions.Notify("You are already wearing a mask", "error") return end
 
     QBCore.Functions.Progressbar("maskon", "Putting Mask On..", 600, false, true, {
