@@ -1,6 +1,10 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterCommand("mask", function()
+    TriggerEvent("lucid-masks:client:ToggleMask")
+end, false)
+
+RegisterNetEvent('lucid-masks:client:ToggleMask', function()
     local ped = PlayerPedId()
     local mask = GetPedDrawableVariation(ped, 1)
     local tex = GetPedTextureVariation(ped, 1)
@@ -10,8 +14,7 @@ RegisterCommand("mask", function()
     else
         TriggerEvent("lucid-masks:client:MaskOff", mask, tex)
     end
-end, false)
-
+end)
 
 RegisterNetEvent('lucid-masks:client:MaskOn', function(item)
     local ped = PlayerPedId()

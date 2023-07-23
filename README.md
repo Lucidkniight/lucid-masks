@@ -36,7 +36,7 @@ id = 'Mask',
 title = 'Mask',
 icon = 'masks-theater',
 type = 'client',
-event = 'lucid-masks:client:MaskOff',
+event = 'lucid-masks:client:ToggleMask',
 shouldClose = true
 ```
 
