@@ -1,4 +1,9 @@
 # lucid-masks
+An update to lucid masks for hats
+
+**** CHECK https://github.com/Lucidkniight/lucid-masks FOR THE NEW UPDATES. I DIDN"T ADD THEM BECAUSE I DIDN"T NEED THEM FOR MY SERVER ****
+
+# lucid-masks
 A simple script that adds masks as items. Remove your mask with /mask to get the item in your inventory. You can then either use the mask item to put it on, or do /mask again to put on the first mask in your inventory.
 - [preview](https://streamable.com/gid7jj)
 ## Dependencies
@@ -15,15 +20,23 @@ A simple script that adds masks as items. Remove your mask with /mask to get the
 * Add the following line to your **qb-core/shared/items.lua**
 ```lua
 	['mask']  = {['name'] = 'mask', ['label'] = 'Mask',  ['weight'] = 1,  ['type'] = 'item',  ['image'] = 'mask.png',  ['unique'] = true,  ['useable'] = true,  ['shouldClose'] = true,  ['combinable'] = nil, 	['description'] = ''},
+  ['hat']  = {['name'] = 'hat', ['label'] = 'Hat',  ['weight'] = 1,  ['type'] = 'item',  ['image'] = 'hat.png',  ['unique'] = true,  ['useable'] = true,  ['shouldClose'] = true,  ['combinable'] = nil, 	['description'] = ''},
 
 ```
-* Drag the "mask.png" image into your **inventory/html/images**
+* Drag the "mask.png" and "hat.png" image into your **inventory/html/images**
 ## Step 3
 * Find the following line in your **qb-radialmenu/config.lua**
 ```lua
 id = 'Mask',
 title = 'Mask',
 icon = 'masks-theater',
+type = 'client',
+event = 'qb-radialmenu:ToggleProps',
+shouldClose = true
+
+id = 'Hat',
+title = 'Hat',
+icon = 'hat-cowboy-side',
 type = 'client',
 event = 'qb-radialmenu:ToggleProps',
 shouldClose = true
@@ -38,6 +51,13 @@ icon = 'masks-theater',
 type = 'client',
 event = 'lucid-masks:client:MaskOff',
 shouldClose = true
+
+id = 'Hat',
+title = 'Hat',
+icon = 'hat-cowboy-side',
+type = 'client',
+event = 'lucid-masks:client:HatOff',
+shouldClose = true
 ```
 
 ## Step 4
@@ -50,6 +70,13 @@ shouldClose = true
         Button = 6,
         Name = "Mask"
     }
+    ["hat"] = {
+        Func = function() ToggleProps("Hat") end,
+        Sprite = "hat",
+        Desc = "Take your hat off/on",
+        Button = 4,
+        Name = "Hat"
+    },
 ```
 
 * and comment it out :
@@ -62,6 +89,13 @@ shouldClose = true
     --    Button = 6,
     --    Name = "Mask"
     --}
+    -- ["hat"] = {
+    --     Func = function() ToggleProps("Hat") end,
+    --     Sprite = "hat",
+    --     Desc = "Take your hat off/on",
+    --     Button = 4,
+    --     Name = "Hat"
+    -- },
 ```
 
 ## Step 5 (optional) - ps-inventory / lj-inventory
@@ -75,7 +109,12 @@ function FormatItemInfo(itemData, dom) {
 }else if (itemData.name == "mask") {
     $(".item-info-title").html("<p>" + `${itemData.info.label|| itemData.label}` + "</p>");
     $(".item-info-description").html(
-        "<p>" + itemData.info.drawableId + "-" + itemData.info.textureId + "</p>"
+        "<p><b> Drawable</b> - " + itemData.info.drawableId + " <b>Texture</b> - " + itemData.info.textureId + "</p>"
+    );
+}else if (itemData.name == "hat") {
+    $(".item-info-title").html("<p>" + `${itemData.info.label|| itemData.label}` + "</p>");
+    $(".item-info-description").html(
+        "<p><b> Drawable</b> - " + itemData.info.drawableId + " <b>Texture</b> - " + itemData.info.textureId + "</p>"
     );
 ```
 * example (https://i.imgur.com/gMWEsXd.png)
